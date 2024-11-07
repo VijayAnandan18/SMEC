@@ -1117,82 +1117,26 @@
   <!-- Section Title -->
   <div class="section-header" data-aos="fade-up" style="text-align: center;">
     <h2 style="color:#A40A08">Projects</h2>
-    <p style="color:black;">Explore our project galleries for a comprehensive view of our capabilities and expertise.</p>
+    <p style="color:black;">Explore a range of warehouse construction projects by Selwin Majestic Engineering Consultancy, showcasing remodeling, design, construction, and repairs with attention to detail and expertise.</p>
   </div>
   <style>
   /* Apply text alignment for mobile view */
-@media (max-width: 768px) {
-  p {
-    text-align: justify;
+  @media (max-width: 768px) {
+    p {
+      text-align: justify;
+    }
   }
-}
-</style><!-- End Section Title -->
 
-  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-    <!-- Projects -->
-    <div class="image-slider">
-      <div class="image-wrapper">
-        <div class="image-item">
-          <img src="assets/img/projects/construction-1.jpg" alt="Project Image 1">
-          <h4 style="background-color:#F99C0E ;">Construction Project 1</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/construction-2.jpg" alt="Project Image 2">
-          <h4 style="background-color:#F99C0E ;">Construction Project 2</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/construction-3.jpg" alt="Project Image 3">
-          <h4 style="background-color:#F99C0E ;">Construction Project 3</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/remodeling-1.jpg" alt="Project Image 4">
-          <h4 style="background-color:#F99C0E ;">Remodeling Project 1</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/remodeling-2.jpg" alt="Project Image 5">
-          <h4 style="background-color:#F99C0E ;">Remodeling Project 2</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/remodeling-3.jpg" alt="Project Image 6">
-          <h4 style="background-color:#F99C0E ;">Remodeling Project 3</h4>
-        </div>
-        <!-- Clones for seamless looping -->
-        <div class="image-item">
-          <img src="assets/img/projects/construction-1.jpg" alt="Project Image 1">
-          <h4 style="background-color:#F99C0E ;">Construction Project 1</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/construction-2.jpg" alt="Project Image 2">
-          <h4 style="background-color:#F99C0E ;">Construction Project 2</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/construction-3.jpg" alt="Project Image 3">
-          <h4 style="background-color:#F99C0E ;">Construction Project 3</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/remodeling-1.jpg" alt="Project Image 4">
-          <h4 style="background-color:#F99C0E ;">Remodeling Project 1</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/remodeling-2.jpg" alt="Project Image 5">
-          <h4 style="background-color:#F99C0E ;">Remodeling Project 2</h4>
-        </div>
-        <div class="image-item">
-          <img src="assets/img/projects/remodeling-3.jpg" alt="Project Image 6">
-          <h4 style="background-color:#F99C0E ;">Remodeling Project 3</h4>
-        </div>
-      </div>
-    </div>
-  </div>
+  /* Ensure all images are the same size */
+  .image-wrapper img {
+    width: 400px; /* Set all images to the same width */
+    height: 300px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure images cover the area without distorting */
+    margin-right: 10px; /* Space between images */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 5px; /* Optional: rounded corners */
+  }
 
-  <!-- Modal for larger image display -->
-  <div id="image-modal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modal-image">
-  </div>
-</section>
-
-<style>
   .image-slider {
     overflow: hidden;
     width: 100%;
@@ -1204,70 +1148,73 @@
     transition: transform 0.5s ease;
     width: calc(400px * 12 + 10px * 11); /* Adjust for total width of images including margins */
   }
+  </style>
 
-  .image-item {
-    position: relative; /* Make position relative to position heading */
-  }
+  <!-- End Section Title -->
 
-  .image-wrapper img {
-    width: 400px; /* Set a fixed width for images */
-    margin-right: 10px; /* Space between images */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    border-radius: 5px; /* Optional: rounded corners */
-  }
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    <!-- Projects -->
+    <div class="image-slider">
+      <div class="image-wrapper">
+        <div class="image-item">
+          <img src="assets/img/projects/construction-1.jpg" alt="Project Image 1">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 1</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/construction-2.jpg" alt="Project Image 2">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 2</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/construction-3.jpg" alt="Project Image 3">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 3</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/remodeling-1.jpg" alt="Project Image 4">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 4</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/remodeling-2.jpg" alt="Project Image 5">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 5</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/remodeling-3.jpg" alt="Project Image 6">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 6</h4> -->
+        </div>
+        <!-- Clones for seamless looping -->
+        <div class="image-item">
+          <img src="assets/img/projects/construction-1.jpg" alt="Project Image 1">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 7</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/construction-2.jpg" alt="Project Image 2">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 8</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/construction-3.jpg" alt="Project Image 3">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 9</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/remodeling-1.jpg" alt="Project Image 4">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 10</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/remodeling-2.jpg" alt="Project Image 5">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 11</h4> -->
+        </div>
+        <div class="image-item">
+          <img src="assets/img/projects/remodeling-3.jpg" alt="Project Image 6">
+          <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 12</h4> -->
+        </div>
+      </div>
+    </div>
+  </div>
 
-  .image-item h4 {
-    position: absolute; /* Position the heading over the image */
-    bottom: 10px; /* Position from the bottom */
-    left: 10px; /* Position from the left */
-    color: white; /* Text color */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 5px; /* Padding around text */
-    border-radius: 5px; /* Rounded corners for the heading */
-  }
-
-  /* Modal Styles */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 60%;
-    max-height: 90%;
-  }
-
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .image-wrapper img {
-      display: none; /* Hide images initially on mobile */
-    }
-
-    .image-wrapper img.active {
-      display: block; /* Show active image on mobile */
-      opacity: 0;
-      transition: opacity 1s ease-in-out; /* Fade-in effect */
-    }
-  }
-</style>
+  <!-- Modal for larger image display -->
+  <div id="image-modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-image">
+  </div>
+</section>
 
 <script>
   let currentIndex = 0;
@@ -1341,9 +1288,6 @@
   // Initialize by showing the first image
   showImages();
 </script>
-<!-- /Gallery Section -->
-
-
 
    <!-- ======= Testimonials Section ======= -->
 <!--<section id="testimonials" class="testimonials section-bg">
