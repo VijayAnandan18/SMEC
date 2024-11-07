@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SMEC - Services</title>
+  <meta content="SMEC is a premier building consultancy based in Tirunelveli, Tamil Nadu, offering expert services in construction management, project consulting, and architectural design." name="description">
+  <meta content="building consultancy, Tirunelveli, civil engineering, Structural, Geotechnical, Pipeline, construction, construction management, architectural design, project consulting, Tamil Nadu" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/smeclogo.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center" style="background-color: #ffffff; padding: 2px 0;">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <div class="logo-container d-flex align-items-center"> <!-- Changed to align items horizontally -->
+      <a href="index.html">
+        <img id="logo-image" src="assets/img/smeclogo.webp" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-right: 10px;"> <!-- Added margin-right to separate logo and text -->
+      </a>
+      <p id="logo-text" style="font-family: serif; font-size: 20px; font-weight: bold; color: #A40A08; margin: 0; text-align: left;">Selwin Majestic Engineering Consultancy</p> <!-- Removed top margin for better alignment -->
+    </div>
+    
+    <script>
+      function adjustStyles() {
+        var logoImage = document.getElementById("logo-image");
+        var logoText = document.getElementById("logo-text");
+        
+        if (window.innerWidth <= 768) {
+          logoImage.style.width = "90px"; // Increase logo size slightly for mobile view
+          logoImage.style.height = "90px"; // Increase logo height slightly for mobile view
+          logoText.style.fontSize = "10px"; // Reduce font size for mobile view
+        } else {
+          logoImage.style.width = "130px"; // Reset logo size for larger screens
+          logoImage.style.height = "130px"; // Reset logo height for larger screens
+          logoText.style.fontSize = "20px"; // Reset font size for larger screens
+        }
+      }
+    
+      // Adjust styles on load
+      adjustStyles();
+      // Adjust styles on window resize
+      window.addEventListener("resize", adjustStyles);
+    </script>
+    
+    
+    <a href="index.html" class="logo d-flex align-items-center">
+      <div style="background-color: white; padding: 1px; border-radius: 20px;">
+        <h1 style="color:  #A40A08;">
+          <div>
+          </div>
+        </h1>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav id="navbar-desktop" class="navbar d-none d-lg-block" style="background-color: #ffffffd3;">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="services.html"  class="active"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="supervision-works.html">Construction Supervision</a></li>
+            <li><a href="Project-management.html">Project Management</a></li>
+            <li><a href="Engsolutions-services.html">Engineering Solutions</a></li>
+            <li><a href="commercial-services.html">Commercial Development</a></li>
+            <li><a href="Warehouse-services.html">Warehouse Construction</a></li>
+            <li><a href="Architectural-services.html">Architectural Modelling</a></li>
+          </ul>
+        </li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav id="navbar-mobile" class="navbar d-lg-none" style="background-color: #ffffffd3;">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li> <!-- Simplified without dropdown -->
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Navigation Toggle Icons -->
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list d-lg-none"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x d-lg-none"></i>
+  </div>
+</header>
+
+<style>
+  /* Basic navbar styles */
+  #navbar-desktop ul li a,
+  #navbar-mobile ul li a {
+    color:  #A40A08;
+    text-decoration: none;
+  }
+
+  #navbar-desktop ul li a:hover,
+  #navbar-mobile ul li a:hover {
+    color: #FEB129;
+  }
+
+  #navbar-desktop ul, #navbar-mobile ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .logo-container {
+    text-align: left; /* Align the text left */
+    margin: 0; /* Reset margins */
+  }
+
+  .logo-container img {
+    border-radius: 50%; /* Ensure the logo remains circular */
+    transition: transform 0.3s; /* Add a hover effect */
+  }
+
+  .logo-container img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+  }
+
+  /* Mobile-specific styles */
+  @media (max-width: 991px) {
+    /* Hide desktop navbar on mobile */
+    #navbar-desktop {
+      display: none;
+    }
+
+    /* Show mobile navbar on mobile */
+    #navbar-mobile {
+      display: block;
+    }
+  }
+
+  /* Desktop-specific styles */
+  @media (min-width: 992px) {
+    /* Show desktop navbar on desktop */
+    #navbar-desktop {
+      display: block;
+    }
+
+    /* Hide mobile navbar on desktop */
+    #navbar-mobile {
+      display: none;
+    }
+  }
+
+  /* Adjustments for smaller screens */
+  @media(max-width:768px) {
+    #navbar-desktop ul li a,
+    #navbar-mobile ul li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+</style>
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Services</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Services</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+  
+  <!-- ======= Services Section ======= -->
+<section id="services" class="services section-bg" style="background-color: white;">
+  <div class="container" data-aos="zoom-in-down">
+
+    <div class="section-header">
+      <h2 style="color:#A40A08; font-size: 1.8rem;">Our Expertises</h2>
+      <p style="color:black; font-size: 1.2rem;">We provide a range of construction and engineering services tailored to meet your needs and ensure project success.</p>
+    </div>
+    <style>
+      /* Apply text alignment for mobile view */
+      @media (max-width: 768px) {
+        p {
+          text-align: justify;
+        }
+      }
+    </style>
+
+    <ul class="service-list">
+      <li data-aos="fade-up" data-aos-delay="100" onclick="location.href='Marine-special.html';">
+        <div class="icon">
+          <i class="fas fa-anchor"></i>
+        </div>
+        <h3>Marine Structure</h3>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="200" onclick="location.href='Harbour-special.html';">
+        <div class="icon">
+          <i class="fas fa-water"></i>
+        </div>
+        <h3>Harbour Engineering</h3>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="300" onclick="location.href='Business-special.html';">
+        <div class="icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3>Business Complex Development</h3>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="400" onclick="location.href='Solutions-special.html';">
+        <div class="icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3>Engineering Solutions</h3>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="500" onclick="location.href='Project-special.html';">
+        <div class="icon">
+          <i class="fas fa-clipboard-check"></i>
+        </div>
+        <h3>Project Management Consultancy</h3>
+      </li>
+
+      <li data-aos="fade-up" data-aos-delay="600" onclick="location.href='client-centric.html';">
+        <div class="icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Client-Centric Solutions</h3>
+      </li>
+    </ul>
+
+  </div>
+</section><!-- End Services Section -->
+
+<style>
+.service-list {
+  display: flex; /* Display items in a row */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  justify-content: space-between; /* Space items evenly */
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.service-list li {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Align items vertically */
+  margin: 10px; /* Space between items */
+  cursor: pointer; /* Pointer cursor for clickable items */
+  padding: 15px; /* Padding inside each item */
+  border: 1px solid #ddd; /* Border for card effect */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  flex: 1 1 calc(30% - 20px); /* Responsive width, adjust as needed */
+  max-width: calc(30% - 20px); /* Prevent items from growing too large */
+}
+
+.service-list li:hover {
+  background-color: #f1f1f1; /* Change background on hover */
+}
+
+.service-list .icon {
+  margin-right: 15px; /* Space between icon and text */
+  font-size: 24px; /* Size of icons */
+  color: #A40A08; /* Icon color */
+}
+
+.service-list h3 {
+  margin: 0; /* Remove margin */
+  font-size: 1.5rem; /* Adjust heading size */
+  color: #333; /* Heading color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-list li {
+    flex: 1 1 calc(100% - 20px); /* Full width on smaller screens */
+    max-width: calc(100% - 20px); /* Prevent items from growing too large */
+  }
+}
+
+@media (min-width: 769px) {
+  .service-list li {
+    flex: 1 1 calc(30% - 20px); /* Three items per row on larger screens */
+    max-width: calc(30% - 20px); /* Prevent items from growing too large */
+  }
+}
+</style>
+
+    
+ <section id="about" class="about" style="background-color: white;">
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="section-header"><center><h2  style="color:#A40A08;font-size:2.0rem;">Our Services</h2></center></div>
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/img/projects/services1.jpg" alt="Construction Supervision" class="img-fluid">
+          </div>
+          <div class="card-body">
+            <h3><a href="supervision-works.html" class="stretched-link">Construction Supervision</a></h3>
+            <p class="card-text">Expert oversight to ensure projects are completed on time and within budget.</p>
+          </div>
+        </div>
+      </div><!-- End Card Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/img/projects/services2.jpg" alt="Project Management" class="img-fluid">
+          </div>
+          <div class="card-body">
+            <h3><a href="Project-special.html" class="stretched-link">Project Management</a></h3>
+            <p class="card-text">Comprehensive management services to streamline processes and enhance project delivery.</p>
+          </div>
+        </div>
+      </div><!-- End Card Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/img/projects/services3.jpg" alt="Engineering Solutions" class="img-fluid">
+          </div>
+          <div class="card-body">
+            <h3><a href="Engsolutions-services.html" class="stretched-link">Engineering Solutions</a></h3>
+            <p class="card-text">Innovative engineering solutions for civil and mechanical construction projects.</p>
+          </div>
+        </div>
+      </div><!-- End Card Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/img/projects/services4.jpg" alt="Commercial Development" class="img-fluid">
+          </div>
+          <div class="card-body">
+            <h3><a href="commercial-services.html" class="stretched-link">Commercial Development</a></h3>
+            <p class="card-text">Development of commercial buildings and short-term rental spaces tailored for businesses.</p>
+          </div>
+        </div>
+      </div><!-- End Card Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/img/projects/services5.jpg" alt="Warehouse Construction" class="img-fluid">
+          </div>
+          <div class="card-body">
+            <h3><a href="Warehouse-services.html" class="stretched-link">Warehouse construction</a></h3>
+            <p class="card-text">Construction of warehouses specifically designed to meet client needs and specifications.</p>
+          </div>
+        </div>
+      </div><!-- End Card Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="card">
+          <div class="card-img">
+            <img src="assets/img/projects/services6.jpg" alt="Custom Solutions" class="img-fluid">
+          </div>
+          <div class="card-body">
+            <h3><a href="Architectural-services.html" class="stretched-link">Architectural Modelling</a></h3>
+            <p class="card-text">Tailored solutions for unique construction challenges to maximize efficiency and effectiveness.</p>
+          </div>
+        </div>
+      </div><!-- End Card Item -->
+    </div>
+  </div>
+</section>
+<!-- End About Section -->
+
+<style>
+  .about {
+    padding: -50px; /* Reduced padding for top and bottom */
+    background-color: #f8f9fa;
+  }
+
+  .about .section-header {
+    text-align: center; /* Center align the text */
+    margin-bottom: -40px; /* Reduced space below the section title */
+  }
+
+  .about .description {
+    margin-top: 10px; /* Space above the description */
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    color: #6c757d; /* Subtle color for the description */
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure even spacing */
+    height: 100%; /* Ensure cards are uniform height */
+    border: none; /* Remove card border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+  }
+
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  }
+
+  .card-img {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    height: 200px; /* Fixed height for uniformity */
+    overflow: hidden; /* Hide overflow */
+  }
+
+  .card-img img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    border-top-left-radius: 10px; /* Match card border radius */
+    border-top-right-radius: 10px; /* Match card border radius */
+  }
+
+  .card-body {
+    padding: 20px; /* Padding for card content */
+    flex-grow: 1; /* Allow body to grow */
+    display: flex;
+    flex-direction: column; /* Stack title and text */
+  }
+
+  .card-body h3 {
+    margin-bottom: 10px; /* Space below title */
+  }
+
+  .card-text {
+    text-align: justify; /* Justified text */
+    margin-bottom: 0; /* Remove bottom margin */
+    color: #495057; /* Darker text for readability */
+    flex-grow: 1; /* Allow text area to grow */
+  }
+</style>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/+919789099139" class="whatsapp-button" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+  <span class="tooltip">WhatsApp</span>
+</a>
+
+<!-- Enquiry Floating Button -->
+<a href="contact.html" class="enquiry-button" target="_blank">
+  <i class="bi bi-envelope"></i>
+  <span class="tooltip">Enquiry</span>
+</a>
+
+<!-- CSS for WhatsApp and Enquiry Buttons -->
+<style>
+.whatsapp-button, .enquiry-button {
+  position: fixed;
+  bottom: 60px;
+  background-color: #25D366; /* WhatsApp green color */
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 20px rgba(37, 211, 102, 0.5); /* Initial glow */
+  font-size: 24px; /* Adjust size as needed */
+  text-decoration: none;
+  z-index: 1000; /* Ensure it's above other elements */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Positioning of Buttons */
+.whatsapp-button {
+  right: 10px;
+}
+.enquiry-button {
+  right: 80px;
+  background-color: #A40A08; /* Enquiry button color */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 20px rgba(164, 10, 8, 0.5); /* Initial glow */
+}
+
+/* Hover Effect */
+.whatsapp-button:hover, .enquiry-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 30px rgba(37, 211, 102, 1); /* Enhanced glow on hover */
+}
+
+.enquiry-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 30px rgba(164, 10, 8, 1); /* Enhanced glow on hover */
+}
+
+/* Tooltip CSS */
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: 70px;
+  white-space: nowrap;
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+}
+
+.whatsapp-button:hover .tooltip,
+.enquiry-button:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
+
+
+    
+    <!-- ======= Alt Services Section 2 ======= -->
+    <section id="alt-services-2" class="alt-services section-bg">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3>Comprehensive Project Services</h3>
+            <p>Our services encompass a wide range of engineering and project management needs, ensuring efficiency and success in every phase of your project.</p>
+    
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-easel flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Marine Projects</a></h4>
+                <p>Expertise in managing and supervising marine construction projects to ensure quality and safety.</p>
+              </div>
+            </div><!-- End Icon Box -->
+    
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Harbor Design</a></h4>
+                <p>Comprehensive design services for harbor projects, focusing on sustainability and functionality.</p>
+              </div>
+            </div><!-- End Icon Box -->
+    
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Business Complex Development</a></h4>
+                <p>From design to completion, we manage every aspect of business complex projects efficiently.</p>
+              </div>
+            </div><!-- End Icon Box -->
+    
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Technical Consulting</a></h4>
+                <p>Providing expert consulting services for both civil and mechanical projects to resolve issues promptly.</p>
+              </div>
+            </div><!-- End Icon Box -->
+          </div>
+    
+          <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services-2.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+        </div>
+    
+      </div>
+    </section><!-- End Alt Services Section 2 -->
+    
+    <!-- ======= Alt Services Section ======= -->
+    <section id="alt-services" class="alt-services">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+    
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3>Our Commitment to Excellence</h3>
+            <p>We are dedicated to providing high-quality engineering and project management services that exceed client expectations.</p>
+    
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-easel flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Quality Assurance</a></h4>
+                <p>Implementing robust quality assurance processes to deliver exceptional project outcomes.</p>
+              </div>
+            </div><!-- End Icon Box -->
+    
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Sustainability Practices</a></h4>
+                <p>Incorporating sustainable practices into our projects to minimize environmental impact.</p>
+              </div>
+            </div><!-- End Icon Box -->
+    
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Client-Centered Approach</a></h4>
+                <p>Prioritizing client needs and preferences to ensure satisfaction throughout the project lifecycle.</p>
+              </div>
+            </div><!-- End Icon Box -->
+    
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Innovative Solutions</a></h4>
+                <p>Utilizing the latest technologies and methodologies to deliver innovative engineering solutions.</p>
+              </div>
+            </div><!-- End Icon Box -->
+    
+          </div>
+        </div>
+    
+      </div>
+    </section><!-- End Alt Services Section -->
+    
+
+    <!-- ======= Testimonials Section ======= -->
+<!--<section id="testimonials" class="testimonials section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Testimonials</h2>
+      <p>What our clients say about us. Their feedback and experiences highlight our commitment to excellence.</p>
+    </div>
+
+    <div class="slides-2 swiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>CEO &amp; Founder</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="text-align: justify;">
+                <i class="bi bi-quote quote-icon-left"></i>
+                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+        </div> End testimonial item 
+
+        <div class="swiper-slide">
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="text-align: justify;">
+                <i class="bi bi-quote quote-icon-left"></i>
+                The service provided was exceptional, and I appreciated the attention to detail throughout the project. The team's expertise made all the difference.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+        </div> End testimonial item 
+
+        <div class="swiper-slide">
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="text-align: justify;">
+                <i class="bi bi-quote quote-icon-left"></i>
+                The professionalism and dedication shown by the team were impressive. They delivered ahead of schedule and exceeded our expectations.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+        </div> End testimonial item 
+
+        <div class="swiper-slide">
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="text-align: justify;">
+                <i class="bi bi-quote quote-icon-left"></i>
+                The team's expertise made a significant difference in the project's success. I highly recommend their services to anyone looking for quality work.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+        </div> End testimonial item 
+
+        <div class="swiper-slide">
+          <div class="testimonial-wrap">
+            <div class="testimonial-item">
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="text-align: justify;">
+                <i class="bi bi-quote quote-icon-left"></i>
+                Their commitment to customer satisfaction is evident. I was impressed with how they handled every aspect of the project with care and professionalism.
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+        </div> End testimonial item 
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section>End Testimonials Section -->
+
+  </main><!-- End #main -->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+  <div class="footer-content position-relative">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <img id="logo-image" src="assets/img/smeclogo.webp" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-right: 10px;"> 
+          <div class="footer-info">
+        
+            <p style="text-align: justify;">
+              Mr. <span style="text-transform: uppercase;">V. KRISHNASAMY</span>,<br>
+              <span style="text-transform: uppercase;">MANAGING DIRECTOR</span>,<br>
+              <span style="text-transform: uppercase;">Selwin Majestic Engineering Consultancy,</span><br>
+              15, Bell Amorces Colony-2, Palayamkottai, Tirunelveli.<br>
+              <strong>Phone No 1:</strong> <a href="tel:+91 9789099139">9789099139</a><br>
+              <strong>Phone No 2:</strong> <a href="tel:+91 9489929139">9489929139</a><br>
+              <strong>Telphone No 1:</strong> <a href="tel:0462-2577643">0462-2577643</a><br>
+              <strong>Email:</strong> <a href="mailto:selwinmajestic369@gmail.com">selwinmajestic369@gmail.com</a><br>
+          </p>
+          
+            <div class="social-links d-flex mt-3">
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div><!-- End footer info column-->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+           <!--- <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>-->
+          </ul>
+        </div><!-- End footer links column-->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="supervision-works.html">Construction Supervision</a></li>
+            <li><a href="Project-management.html">Project Management</a></li>
+            <li><a href="Engsolutions-services.html">Engineering solutions</a></li>
+            <li><a href="commercial-services.html">Commercial development</a></li>
+            <li><a href="Warehouse-services.html">Warehouse construction </a></li>
+            <li><a href="Architectural-services.html">Architectural Modelling</a></li>
+          </ul>
+        </div><!-- End footer links column-->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Field of Expertise</h4>
+          <ul>
+            <li><a href="Marine-special.html">Marine Structure</a></li>
+            <li><a href="Harbour-special.html">Harbour Engineering</a></li>
+            <li><a href="Business-special.html">Business Complex Development</a></li>
+            <li><a href="Project-special.html">Project Management consultancy</a></li>
+            <li><a href="client-centric.html">Client Centric Solutions</a></li>
+          </ul>
+        </div><!-- End footer links column-->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <!--<h4>Resources</h4>
+          <ul>
+            <li><a href="blog-details.html">Reports</a></li>
+            <li><a href="blog-details.html">Webinars</a></li>
+            <li><a href="blog-details.html">Case Studies</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="blog.html">Newsletters</a></li>
+          </ul>
+        </div>--><!-- End footer links column-->
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-legal text-center position-relative">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>SMEC</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://thevsoft.com/">Vsoftsolutions</a> Distributed by <a href="https://thevsoft.com">Vsoftsolutions</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

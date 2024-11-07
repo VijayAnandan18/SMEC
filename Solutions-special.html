@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>SMEC - Services</title>
+    <meta content="SMEC is a premier building consultancy based in Tirunelveli, Tamil Nadu, offering expert services in construction management, project consulting, and architectural design." name="description">
+    <meta content="building consultancy, Tirunelveli, civil engineering, Structural, Geotechnical, Pipeline, construction, construction management, architectural design, project consulting, Tamil Nadu" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="assets/img/smeclogo.webp" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- =======================================================
+    * Template Name: UpConstruction - v1.3.0
+    * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  </head>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center" style="background-color: #ffffff; padding: 2px 0;">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <div class="logo-container d-flex align-items-center"> <!-- Changed to align items horizontally -->
+        <a href="index.html">
+          <img id="logo-image" src="assets/img/smeclogo.webp" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-right: 10px;"> <!-- Added margin-right to separate logo and text -->
+        </a>
+        <p id="logo-text" style="font-family: serif; font-size: 20px; font-weight: bold; color: #A40A08; margin: 0; text-align: left;">Selwin Majestic Engineering Consultancy</p> <!-- Removed top margin for better alignment -->
+      </div>
+      
+      <script>
+        function adjustStyles() {
+          var logoImage = document.getElementById("logo-image");
+          var logoText = document.getElementById("logo-text");
+          
+          if (window.innerWidth <= 768) {
+            logoImage.style.width = "90px"; // Increase logo size slightly for mobile view
+            logoImage.style.height = "90px"; // Increase logo height slightly for mobile view
+            logoText.style.fontSize = "10px"; // Reduce font size for mobile view
+          } else {
+            logoImage.style.width = "130px"; // Reset logo size for larger screens
+            logoImage.style.height = "130px"; // Reset logo height for larger screens
+            logoText.style.fontSize = "20px"; // Reset font size for larger screens
+          }
+        }
+      
+        // Adjust styles on load
+        adjustStyles();
+        // Adjust styles on window resize
+        window.addEventListener("resize", adjustStyles);
+      </script>
+      
+      
+      <a href="index.html" class="logo d-flex align-items-center">
+        <div style="background-color: white; padding: 1px; border-radius: 20px;">
+          <h1 style="color:  #A40A08;">
+            <div>
+            </div>
+          </h1>
+        </div>
+      </a>
+  
+      <!-- Desktop Navigation -->
+      <nav id="navbar-desktop" class="navbar d-none d-lg-block" style="background-color: #ffffffd3;">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li class="dropdown">
+            <a href="services.html"class="active"><span>Services</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="supervision-works.html">Construction Supervision</a></li>
+              <li><a href="Project-management.html">Project Management</a></li>
+              <li><a href="Engsolutions-services.html">Engineering Solutions</a></li>
+              <li><a href="commercial-services.html">Commercial Development</a></li>
+              <li><a href="Warehouse-services.html">Warehouse Construction</a></li>
+              <li><a href="Architectural-services.html">Architectural Modelling</a></li>
+            </ul>
+          </li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Mobile Navigation -->
+      <nav id="navbar-mobile" class="navbar d-lg-none" style="background-color: #ffffffd3;">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li> <!-- Simplified without dropdown -->
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Mobile Navigation Toggle Icons -->
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list d-lg-none"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x d-lg-none"></i>
+    </div>
+  </header>
+  
+  <style>
+    /* Basic navbar styles */
+    #navbar-desktop ul li a,
+    #navbar-mobile ul li a {
+      color:  #A40A08;
+      text-decoration: none;
+    }
+  
+    #navbar-desktop ul li a:hover,
+    #navbar-mobile ul li a:hover {
+      color: #FEB129;
+    }
+  
+    #navbar-desktop ul, #navbar-mobile ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  
+    .logo-container {
+      text-align: left; /* Align the text left */
+      margin: 0; /* Reset margins */
+    }
+  
+    .logo-container img {
+      border-radius: 50%; /* Ensure the logo remains circular */
+      transition: transform 0.3s; /* Add a hover effect */
+    }
+  
+    .logo-container img:hover {
+      transform: scale(1.05); /* Slightly enlarge the image on hover */
+    }
+  
+    /* Mobile-specific styles */
+    @media (max-width: 991px) {
+      /* Hide desktop navbar on mobile */
+      #navbar-desktop {
+        display: none;
+      }
+  
+      /* Show mobile navbar on mobile */
+      #navbar-mobile {
+        display: block;
+      }
+    }
+  
+    /* Desktop-specific styles */
+    @media (min-width: 992px) {
+      /* Show desktop navbar on desktop */
+      #navbar-desktop {
+        display: block;
+      }
+  
+      /* Hide mobile navbar on desktop */
+      #navbar-mobile {
+        display: none;
+      }
+    }
+  
+    /* Adjustments for smaller screens */
+    @media(max-width:768px) {
+      #navbar-desktop ul li a,
+      #navbar-mobile ul li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  </style>
+  
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>Engineering solutions</h2>
+        <ol>
+          <li><a href="services.html">Services</a></li>
+          <li>Engineering solutions</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+<!-- ======= Civil and Mechanical Engineering Section ======= -->
+<section id="service-details" class="service-details">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+      <img src="assets/img/services/solutionsspecial.webp" alt="Civil and Mechanical Engineering" class="img-fluid mb-4" style="object-fit: cover; height: 300px; width: 100%;">
+  
+      <div class="row gy-4">
+  
+        <div class="col-lg-4">
+          <h4>The Civil and Mechanical Engineering Section</h4>
+          <p>
+            At Selwin Majestic Engineering Consultancy, we provide comprehensive engineering solutions for both civil and mechanical construction projects. Our multidisciplinary team combines expertise in structural engineering, materials science, and project management to deliver high-quality results that meet the unique demands of each project.
+          </p>
+        </div>
+  
+        <div class="col-lg-8">
+          <h3>Engineering Services</h3>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Infrastructure development (roads, bridges, public facilities)</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Design and installation of mechanical systems (HVAC, plumbing)</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Project management throughout the construction lifecycle</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Compliance with regulatory standards and sustainability practices</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Collaboration with clients and stakeholders</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Innovative techniques and cutting-edge technology implementation</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Renovation and upgrading of existing structures</span></li>
+          </ul>
+  
+          <h3>Technical Strengths</h3>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Advanced structural analysis and design</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Materials science expertise for durability and performance</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Cost optimization strategies for project delivery</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Environmental impact assessments and sustainability initiatives</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Customized solutions tailored to client needs</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Timely project completion within budget constraints</span></li>
+          </ul>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section><!-- End Civil and Mechanical Engineering Section -->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+  <div class="footer-content position-relative">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6">
+          <img id="logo-image" src="assets/img/smeclogo.webp" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-right: 10px;"> 
+          <div class="footer-info">
+        
+            <p style="text-align: justify;">
+              Mr. <span style="text-transform: uppercase;">V. KRISHNASAMY</span>,<br>
+              <span style="text-transform: uppercase;">MANAGING DIRECTOR</span>,<br>
+              <span style="text-transform: uppercase;">Selwin Majestic Engineering Consultancy,</span><br>
+              15, Bell Amorces Colony-2, Palayamkottai, Tirunelveli.<br>
+              <strong>Phone No 1:</strong> <a href="tel:+91 9789099139">9789099139</a><br>
+              <strong>Phone No 2:</strong> <a href="tel:+91 9489929139">9489929139</a><br>
+              <strong>Telphone No 1:</strong> <a href="tel:0462-2577643">0462-2577643</a><br>
+              <strong>Email:</strong> <a href="mailto:selwinmajestic369@gmail.com">selwinmajestic369@gmail.com</a><br>
+          </p>
+          
+            <div class="social-links d-flex mt-3">
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div><!-- End footer info column-->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+           <!--- <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>-->
+          </ul>
+        </div><!-- End footer links column-->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="supervision-works.html">Construction Supervision</a></li>
+            <li><a href="Project-management.html">Project Management</a></li>
+            <li><a href="Engsolutions-services.html">Engineering solutions</a></li>
+            <li><a href="commercial-services.html">Commercial development</a></li>
+            <li><a href="Warehouse-services.html">Warehouse construction </a></li>
+            <li><a href="Architectural-services.html">Architectural Modelling</a></li>
+          </ul>
+        </div><!-- End footer links column-->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Field of Expertise</h4>
+          <ul>
+            <li><a href="Marine-special.html">Marine Structure</a></li>
+            <li><a href="Harbour-special.html">Harbour Engineering</a></li>
+            <li><a href="Business-special.html">Business Complex Development</a></li>
+            <li><a href="Project-special.html">Project Management consultancy</a></li>
+            <li><a href="client-centric.html">Client Centric Solutions</a></li>
+          </ul>
+        </div><!-- End footer links column-->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <!--<h4>Resources</h4>
+          <ul>
+            <li><a href="blog-details.html">Reports</a></li>
+            <li><a href="blog-details.html">Webinars</a></li>
+            <li><a href="blog-details.html">Case Studies</a></li>
+            <li><a href="blog.html">Blogs</a></li>
+            <li><a href="blog.html">Newsletters</a></li>
+          </ul>
+        </div>--><!-- End footer links column-->
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-legal text-center position-relative">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>SMEC</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://thevsoft.com/">Vsoftsolutions</a> Distributed by <a href="https://thevsoft.com">Vsoftsolutions</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
