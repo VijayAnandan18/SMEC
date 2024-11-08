@@ -1157,52 +1157,52 @@
     <div class="image-slider">
       <div class="image-wrapper">
         <div class="image-item">
-          <img src="assets/img/projects/construction-1.jpg" alt="Project Image 1">
+          <img src="assets/img/projects/construction-1.webp" alt="Project Image 1">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 1</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/construction-2.jpg" alt="Project Image 2">
+          <img src="assets/img/projects/construction-2.webp" alt="Project Image 2">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 2</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/construction-3.jpg" alt="Project Image 3">
+          <img src="assets/img/projects/construction-3.webp" alt="Project Image 3">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 3</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/remodeling-1.jpg" alt="Project Image 4">
+          <img src="assets/img/projects/remodeling-1.webp" alt="Project Image 4">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 4</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/remodeling-2.jpg" alt="Project Image 5">
+          <img src="assets/img/projects/remodeling-2.webp" alt="Project Image 5">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 5</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/remodeling-3.jpg" alt="Project Image 6">
+          <img src="assets/img/projects/remodeling-3.webp" alt="Project Image 6">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 6</h4> -->
         </div>
         <!-- Clones for seamless looping -->
         <div class="image-item">
-          <img src="assets/img/projects/construction-1.jpg" alt="Project Image 1">
+          <img src="assets/img/projects/construction-1.webp" alt="Project Image 1">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 7</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/construction-2.jpg" alt="Project Image 2">
+          <img src="assets/img/projects/construction-2.webp" alt="Project Image 2">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 8</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/construction-3.jpg" alt="Project Image 3">
+          <img src="assets/img/projects/construction-3.webp" alt="Project Image 3">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 9</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/remodeling-1.jpg" alt="Project Image 4">
+          <img src="assets/img/projects/remodeling-1.webp" alt="Project Image 4">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 10</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/remodeling-2.jpg" alt="Project Image 5">
+          <img src="assets/img/projects/remodeling-2.webp" alt="Project Image 5">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 11</h4> -->
         </div>
         <div class="image-item">
-          <img src="assets/img/projects/remodeling-3.jpg" alt="Project Image 6">
+          <img src="assets/img/projects/remodeling-3.webp" alt="Project Image 6">
           <!-- <h4 style="background-color:#F99C0E ;">Warehouse Construction Image - 12</h4> -->
         </div>
       </div>
@@ -1217,77 +1217,138 @@
 </section>
 
 <script>
-  let currentIndex = 0;
-  const images = document.querySelectorAll('.image-wrapper img');
-  const totalImages = images.length;
+  // Dynamically load GSAP to avoid blocking page rendering
+  const script = document.createElement("script");
+  script.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js";
+  script.onload = function() {
+    const observerScript = document.createElement("script");
+    observerScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Observer.min.js";
+    observerScript.onload = initGSAP;
+    document.head.appendChild(observerScript);
+  };
+  document.head.appendChild(script);
 
-  // Function to show the active image
-  function showImages() {
-    images.forEach((img, index) => {
-      img.classList.remove('active'); // Remove active class from all images
+  function initGSAP() {
+    // Initialize loop once GSAP is loaded
+    let loop = horizontalLoop(".image-item img", {speed: 1, repeat: -1, paddingRight: 25});
+
+    function setDirection(value) {
+      if (loop.direction !== value) {
+        gsap.to(loop, {timeScale: value, duration: 0.3, overwrite: true});
+        loop.direction = value;
+      }
+    }
+
+    // Throttled scroll event handling
+    let throttleTimeout;
+    const throttleDelay = 100; // Delay in milliseconds
+
+    Observer.create({
+      target: window,
+      type: "wheel,scroll,touch",
+      onDown: () => {
+        if (!throttleTimeout) {
+          setDirection(1);
+          throttleTimeout = setTimeout(() => throttleTimeout = null, throttleDelay);
+        }
+      },
+      onUp: () => {
+        if (!throttleTimeout) {
+          setDirection(-1);
+          throttleTimeout = setTimeout(() => throttleTimeout = null, throttleDelay);
+        }
+      }
     });
-    images[currentIndex].classList.add('active'); // Add active class to the current image
+  }
 
-    if (window.innerWidth <= 768) {
-      images[currentIndex].style.opacity = 0; // Start with opacity 0
-      setTimeout(() => {
-        images[currentIndex].style.opacity = 1; // Fade in
-      }, 100); // Delay slightly for effect
+  function horizontalLoop(items, config) {
+    items = gsap.utils.toArray(items);
+    config = config || {};
+    
+    const tl = gsap.timeline({
+      repeat: config.repeat,
+      paused: config.paused,
+      defaults: {ease: "none"},
+      onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)
+    });
+
+    const length = items.length;
+    const startX = items[0].offsetLeft;
+    const times = [];
+    const widths = [];
+    const xPercents = [];
+    let curIndex = 0;
+    const pixelsPerSecond = (config.speed || 1) * 100;
+    const snap = config.snap === false ? v => v : gsap.utils.snap(config.snap || 1);
+    let totalWidth, curX, distanceToStart, distanceToLoop, item, i;
+
+    // Optimize by reducing DOM queries
+    gsap.set(items, {
+      xPercent: (i, el) => {
+        const w = widths[i] = parseFloat(gsap.getProperty(el, "width", "px"));
+        xPercents[i] = snap(parseFloat(gsap.getProperty(el, "x", "px")) / w * 100 + gsap.getProperty(el, "xPercent"));
+        return xPercents[i];
+      }
+    });
+
+    gsap.set(items, {x: 0});
+    totalWidth = items[length - 1].offsetLeft + xPercents[length - 1] / 100 * widths[length - 1] - startX + items[length - 1].offsetWidth * gsap.getProperty(items[length - 1], "scaleX") + (parseFloat(config.paddingRight) || 0);
+
+    // Reduce unnecessary loops and DOM access
+    for (i = 0; i < length; i++) {
+      item = items[i];
+      curX = xPercents[i] / 100 * widths[i];
+      distanceToStart = item.offsetLeft + curX - startX;
+      distanceToLoop = distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+      
+      tl.to(item, {
+        xPercent: snap((curX - distanceToLoop) / widths[i] * 100),
+        duration: distanceToLoop / pixelsPerSecond
+      }, 0)
+        .fromTo(item, {
+          xPercent: snap((curX - distanceToLoop + totalWidth) / widths[i] * 100)
+        }, {
+          xPercent: xPercents[i],
+          duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
+          immediateRender: false
+        }, distanceToLoop / pixelsPerSecond)
+        .add("label" + i, distanceToStart / pixelsPerSecond);
+      times[i] = distanceToStart / pixelsPerSecond;
     }
-  }
 
-  function startSlideshow() {
-    showImages(); // Show the first image
-    if (window.innerWidth <= 768) {
-      setInterval(autoFade, 5000); // Fade on mobile (slowed down)
-    } else {
-      setInterval(autoScroll, 5000); // Scroll on desktop (slowed down)
+    function toIndex(index, vars) {
+      vars = vars || {};
+      (Math.abs(index - curIndex) > length / 2) && (index += index > curIndex ? -length : length);
+      const newIndex = gsap.utils.wrap(0, length, index);
+      let time = times[newIndex];
+
+      if (time > tl.time() !== index > curIndex) {
+        vars.modifiers = {time: gsap.utils.wrap(0, tl.duration())};
+        time += tl.duration() * (index > curIndex ? 1 : -1);
+      }
+      curIndex = newIndex;
+      vars.overwrite = true;
+      return tl.tweenTo(time, vars);
     }
-  }
 
-  // Function for auto-scrolling in desktop view
-  function autoScroll() {
-    currentIndex++;
-    if (currentIndex >= totalImages / 2) {
-      currentIndex = 0; // Reset index after reaching end of original images
+    tl.next = vars => toIndex(curIndex + 1, vars);
+    tl.previous = vars => toIndex(curIndex - 1, vars);
+    tl.current = () => curIndex;
+    tl.toIndex = (index, vars) => toIndex(index, vars);
+    tl.times = times;
+    tl.progress(1, true).progress(0, true);
+
+    if (config.reversed) {
+      tl.vars.onReverseComplete();
+      tl.reverse();
     }
-    const wrapper = document.querySelector('.image-wrapper');
-    wrapper.style.transform = `translateX(${-currentIndex * (400 + 10)}px)`; // Adjust based on image size
+
+    return tl;
   }
-
-  // Function for auto-fading in mobile view
-  function autoFade() {
-    currentIndex++;
-    if (currentIndex >= totalImages / 2) {
-      currentIndex = 0; // Reset index after reaching end of original images
-    }
-    showImages(); // Call the show images function
-  }
-
-  window.addEventListener('resize', startSlideshow);
-  window.onload = startSlideshow; // Start the slideshow on page load
-
-  // Open modal with clicked image
-  function openModal(src) {
-    const modal = document.getElementById('image-modal');
-    const modalImage = document.getElementById('modal-image');
-    modalImage.src = src;
-    modal.style.display = "block";
-  }
-
-  // Close modal
-  function closeModal() {
-    document.getElementById('image-modal').style.display = "none";
-  }
-
-  // Add click event to images
-  images.forEach(image => {
-    image.addEventListener('click', () => openModal(image.src));
-  });
-
-  // Initialize by showing the first image
-  showImages();
 </script>
+
+<!-- /Gallery Section -->
+
 
    <!-- ======= Testimonials Section ======= -->
 <!--<section id="testimonials" class="testimonials section-bg">
