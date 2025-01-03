@@ -1,6 +1,1 @@
-Thanks for downloading this template!
-
-Template Name: UpConstruction
-Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Customized a Bootstrap template and integrated a secure backend API using Node.js, Express.js, MySQL for data storage, and EmailJS for real-time notifications.
